@@ -9,6 +9,55 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
-    
   </body>
 </html>
+
+<!-- import { useState } from 'react';
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
+
+export default () => {
+  const [rotation, setRotation] = useState(0); // Track the rotation
+
+  const handleScrollbarDrag = () => {
+    setRotation((prevRotation) => prevRotation - 90); // Decrease by 90deg (counterclockwise)
+  };
+
+  return (
+    <div>
+      <div className="circle" style={{ transform: `rotate(${rotation}deg)` }}>
+        <div className="red">
+          <img src="/src/assets/pngwingred-cake.png" alt="" style={{ height: '250px', width: '300px', marginTop: '-70px', marginLeft: '10px' }} />
+        </div>
+        <div className="brown">
+          <img src="/src/assets/Group 1 brown-cake.png" alt="" style={{ height: '320px', width: '350px', marginTop: '-10px', marginLeft: '10px' }} />
+        </div>
+        <div className="straw">
+          <img src="/src/assets/pngwing strawberry-cake.png" alt="" style={{ height: '320px', width: '350px', marginTop: '-18px', marginLeft: '-80px' }} />
+        </div>
+        <div className="black">
+          <img src="/src/assets/pngwing black cake.png" alt="" style={{ height: '320px', width: '330px', marginTop: '-25px', marginRight: '-20px' }} />
+        </div>
+      </div>
+
+      <Swiper
+        modules={[Navigation, Pagination, Scrollbar, A11y]}
+        spaceBetween={10}
+        slidesPerView={4}
+        navigation
+        scrollbar={{ draggable: true }}
+        onScrollbarDrag={handleScrollbarDrag} // Call the handler on scrollbar interaction
+      >
+        <SwiperSlide><img src="/src/assets/Group 1 brown-cake.png" alt="" style={{ width: "60px" }} /></SwiperSlide>
+        <SwiperSlide><img src="/src/assets/pngwing strawberry-cake.png" alt="" style={{ width: "60px" }} /></SwiperSlide>
+        <SwiperSlide><img src="/src/assets/pngwing black cake.png" alt="" style={{ width: "60px" }} /></SwiperSlide>
+        <SwiperSlide><img src="/src/assets/pngwingred-cake.png" alt="" style={{ width: "60px" }} /></SwiperSlide>
+        {/* Add more slides as needed */}
+      </Swiper>
+    </div>
+  );
+}; -->

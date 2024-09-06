@@ -6,6 +6,9 @@ import Scroll from './Scroll'
 export const Dashboard = () => {
   return (
     <div className='main'>
+      <div className="title">
+        <p>Cake Design by Kayamo</p>
+      </div>
       <Leftside />
       <Scroll />
       <Rightsided />
