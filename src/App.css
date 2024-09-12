@@ -24,7 +24,7 @@
   width: 30%;
   /* border: 1px solid; */
   position: absolute;
-  left: 40%;
+  left: 45%;
   top: 10%;
   text-decoration-thickness: 10px;
   display: flex;
@@ -114,9 +114,9 @@
   position: absolute;
   top: 70px;
   left: 350px;
-  background-image: url(/src/assets/pngwinghalf.png);
-  background-repeat: no-repeat;
-  background-size: contain;
+  background-image: url(/src/assets/pngwing\ 2\ strawberry-half-cake.png);
+  transition: background-image 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  opacity: 1;
 }
 .roll{
   height: 100vh;
@@ -152,16 +152,23 @@
   width: 280px;
   /* border: 1px solid; */
   position: absolute;
-  left: 180px;
+  left: 120px;
   top: -80px;
+}
+.red img{
+  rotate: 90deg;
+  transform: translateX(20%);
 }
 .brown{
   height: 280px;
   width: 280px;
   /* border: 1px solid blue; */
   position: absolute;
-  right: -100px;
-  bottom: 200px;
+  right: -90px;
+  bottom: 280px;
+}
+.brown>img{
+  rotate: 180deg;
 }
 .straw{
   height: 280px;
@@ -178,13 +185,15 @@
   position: absolute;
   bottom: -110px;
   right: 140px;
+  transform: rotate(-90deg);
 }
 
 .swiper{
   height: 65px;
-  width: 60%;
+  width: 50%;
   position: absolute;
   top: 70%;
+  left: 30px;
   bottom: 50px;
   display: flex;
   align-items: center;
@@ -198,7 +207,7 @@
   background-color: transparent;
 }
 .swiper-scrollbar-drag{
-  width: 120px;
+  /* width: 120px; */
   background-color: #FD3D38 !important;
 }
 
@@ -209,4 +218,20 @@
 
 .swiper-button-next {
   margin-right: -12px;
+}
+.selection{
+  height: 40px;
+  width: 40%;
+  /* border: 1px solid blue; */
+  position: absolute;
+  top: 90%;
+  left: 35%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.icons{
+  width: 60px;
+  /* border: 1px solid purple; */
+  display: grid;
+  place-items: center;
 }

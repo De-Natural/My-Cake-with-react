@@ -1,23 +1,40 @@
-import React from 'react'
+import React from 'react';
 
-export const Leftside = () => {
+export const Leftside = ({ imageData }) => {
+  console.log(imageData);
   return (
-    <div className='leftsided'>
+    <div 
+    className='leftsided'
+    style={{
+      backgroundImage: `url(${imageData.leftsideImage})`,
+      backgroundSize: '500px 100%',
+      backgroundPosition: 'center',
+      backgroundRepeat: 'no-repeat',
+      // height: '90px'
+    }}
+    >
       <div className="card">
-            <div className="amount">
-                <span></span>
-                <input type="number" id="" value={70.8} disabled />
-            </div>
-            <span style={{fontSize: '22px'}}>Vanilla Cake</span>
-            <p style={{textAlign: 'center', fontSize: '18px'}}>
-                A classic favourite, known  for 
-                its rich and moist texture, often
-                topped with chocolate icing or
-                chocolate lovers.
-            </p>
-            <button>Get now</button>
+        <div className="amount">
+          <span></span>
+          <input type="number" value={imageData.amount} disabled />
+        </div>
+        <span style={{ fontSize: '22px' }}>{imageData.description}</span>
+        <p style={{ textAlign: 'center', fontSize: '18px' }}>
+          {imageData.text}
+        </p>
+        <button>Get now</button>
       </div>
-      <div className="half_cake"></div>
+      <div
+        className="half_cake"
+        style={{
+          backgroundImage: `url(${imageData.profileImage})`,  // Dynamically set background image
+          backgroundSize: 'contain',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          height: '90px'
+        }}
+      >
+      </div>
     </div>
-  )
-}
+  );
+};
