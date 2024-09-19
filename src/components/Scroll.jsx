@@ -28,8 +28,8 @@ export default function Scroll({ onNextSlide, onPrevSlide }) {
       slidesPerView={4}
       navigation
       scrollbar={{ draggable: true }}
-      onSlideNextTransitionStart={handleNextSlide}  // When sliding forward
-      onSlidePrevTransitionStart={handlePrevSlide}  // When sliding backward
+      onSlideNextTransitionStart={handleNextSlide}
+      onSlidePrevTransitionStart={handlePrevSlide}
     >
       <SwiperSlide><img src="/src/assets/Group-1-brown-cake.png" alt="" style={{width: "60px"}}/></SwiperSlide>
       <SwiperSlide><img src="/src/assets/pngwing-strawberry-cake.png" alt="" style={{width: "60px"}}/></SwiperSlide>

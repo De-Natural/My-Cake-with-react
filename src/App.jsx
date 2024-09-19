@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import { Dashboard } from './components/dashboard'
+import Juice from './components/Juice'
 
 function App() {
 
@@ -8,6 +9,7 @@ function App() {
   return (
     <>
       <Dashboard />
+      <Juice />
     </>
   )
 }

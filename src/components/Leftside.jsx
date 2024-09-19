@@ -10,7 +10,6 @@ export const Leftside = ({ imageData }) => {
       backgroundSize: '500px 100%',
       backgroundPosition: 'center',
       backgroundRepeat: 'no-repeat',
-      // height: '90px'
     }}
     >
       <div className="card">
@@ -27,7 +26,7 @@ export const Leftside = ({ imageData }) => {
       <div
         className="half_cake"
         style={{
-          backgroundImage: `url(${imageData.profileImage})`,  // Dynamically set background image
+          backgroundImage: `url(${imageData.profileImage})`,
           backgroundSize: 'contain',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
