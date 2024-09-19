@@ -71,24 +71,47 @@
   }
   .JuiceRight{
     height: 100vh;
-    width: 40%;
-    border: 1px solid;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 50%;
+    /* border: 1px solid; */
+    position: relative;
   }
   .juiceSwiper{
-    height: 250px;
-    width: 300px;
-    border: 1px solid red;
+    height: 500px;
+    width: 450px;
+    /* border: 1px solid red; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
   }
-  .juiceSwiper .swiper-slide {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  .swiper-slide {
+    width: 350px;
   }
   .juiceSwiper img {
     width: 100%;
     height: auto;
     object-fit: cover; 
   }
+  
+  /* Define keyframes for animations */
+  @keyframes scaleUp {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  /* Lemon Juice animation class */
+  .active-lemon img {
+    animation: scaleUp 1s ease-in-out forwards;
+  }
+
+  /* Orange Juice animation class */
+  .active-orange img {
+    animation: fadeIn 1s ease-in-out forwards;
+  }
+

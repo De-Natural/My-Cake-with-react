@@ -1,21 +1,88 @@
-import React from 'react';
+import React, { useRef } from 'react';
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';  // Correct CSS import for Swiper
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
 
-export default function JuiceRight() {
+export default function JuiceRight({ onSlideChange }) {
+  const swiperRef = useRef(null);
+
+  // Handler for slide change
+  const handleSlideChange = (swiper) => {
+    const slides = swiperRef.current.swiper.slides;
+
+    // Clear the active classes from all slides
+    slides.forEach(slide => {
+      slide.classList.remove('active-lemon', 'active-orange');
+    });
+
+    // Add the appropriate class for animation based on the active index
+    if (swiper.activeIndex === 0) {
+      slides[swiper.activeIndex].classList.add('active-lemon');
+    }
+    if (swiper.activeIndex === 2) {
+      slides[swiper.activeIndex].classList.add('active-orange');
+    }
+  };
+
   return (
     <div className='JuiceRight'>
       <Swiper
-        spaceBetween={1}
+        ref={swiperRef}
+        modules={[Navigation, Pagination, Scrollbar, A11y]}
+        spaceBetween={0}
         slidesPerView={1}
-        onSlideChange={() => console.log('slide change')}
-        onSwiper={(swiper) => console.log(swiper)}
+        navigation
+        onSlideChange={handleSlideChange}  // Call slide change handler
         className='juiceSwiper'
       >
-        <SwiperSlide><img src="/assets/pngwing-Lemon-juice-2.png" alt="Lemon Juice" /></SwiperSlide>
-        <SwiperSlide><img src="/assets/pngwing-Pineapple-juice.png" alt="Pineapple Juice" /></SwiperSlide>
-        <SwiperSlide><img src="/assets/pngwing-Orange-juice-cup.png" alt="Orange Juice" /></SwiperSlide>
-        <SwiperSlide><img src="/assets/pngwing-5-Straw-berry-juice.png" alt="Strawberry Juice" /></SwiperSlide>
+        <SwiperSlide>
+          <div style={{ display: 'flex', justifyContent: 'center' }}>
+            <img src="/assets/pngwing-6-Lemon-juice-1.png" alt="Lemon Juice" style={{ height: '80%', width: '50%', left: '30px', position: 'absolute', zIndex: '2' }} />
+            <img src="/assets/pngwing-Lemon-juice-2.png" alt="Lemon 2 Juice" style={{ height: '85%', width: '60%', right: '10px', position: 'absolute', zIndex: '-3' }} />
+          </div>
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <img src="/assets/pngwing- Pineapple-juice.png" alt="Pineapple Juice" style={{ height: '100%', width: '100%' }} />
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <div style={{ display: 'flex', justifyContent: 'center' }}>
+            <img src="/assets/pngwing-Orange-juice-cup.png" alt="Orange Juice" style={{ height: '60%', width: '80%' }} />
+            <img src="/assets/pngwing-4-Orange-juice-friut-right.png" alt="half Orange Juice" style={{ height: '50%', width: '60%', right: '-80px', bottom: '0', position: 'absolute', zIndex: '-1' }} />
+            <img src="/assets/pngwing-5-Orange-juice-friut-left.png" alt="half Orange Juice" style={{ height: '50%', width: '60%', left: '-70px', bottom: '0', position: 'absolute', zIndex: '-1' }} />
+          </div>
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <img src="/assets/pngwing-5-Straw-berry-juice.png" alt="Strawberry Juice" />
+        </SwiperSlide>
+      
+        <SwiperSlide>
+          <div style={{ display: 'flex', justifyContent: 'center' }}>
+            <img src="/assets/pngwing-6-Lemon-juice-1.png" alt="Lemon Juice" style={{ height: '80%', width: '50%', left: '30px', position: 'absolute', zIndex: '2' }} />
+            <img src="/assets/pngwing-Lemon-juice-2.png" alt="Lemon 2 Juice" style={{ height: '85%', width: '60%', right: '10px', position: 'absolute', zIndex: '-3' }} />
+          </div>
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <img src="/assets/pngwing- Pineapple-juice.png" alt="Pineapple Juice" style={{ height: '100%', width: '100%' }} />
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <div style={{ display: 'flex', justifyContent: 'center' }}>
+            <img src="/assets/pngwing-Orange-juice-cup.png" alt="Orange Juice" style={{ height: '60%', width: '80%' }} />
+            <img src="/assets/pngwing-4-Orange-juice-friut-right.png" alt="half Orange Juice" style={{ height: '50%', width: '60%', right: '-80px', bottom: '0', position: 'absolute', zIndex: '-1' }} />
+            <img src="/assets/pngwing-5-Orange-juice-friut-left.png" alt="half Orange Juice" style={{ height: '50%', width: '60%', left: '-70px', bottom: '0', position: 'absolute', zIndex: '-1' }} />
+          </div>
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <img src="/assets/pngwing-5-Straw-berry-juice.png" alt="Strawberry Juice" />
+        </SwiperSlide>
       </Swiper>
     </div>
   );
