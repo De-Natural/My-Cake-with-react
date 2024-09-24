@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
@@ -8,22 +8,22 @@ import 'swiper/css/scrollbar';
 
 export default function JuiceRight({ onSlideChange }) {
   const swiperRef = useRef(null);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [animationClass, setAnimationClass] = useState("fade-in"); // Animation class
 
-  // Handler for slide change
   const handleSlideChange = (swiper) => {
-    const slides = swiperRef.current.swiper.slides;
+    const newIndex = swiper.activeIndex;
 
-    // Clear the active classes from all slides
-    slides.forEach(slide => {
-      slide.classList.remove('active-lemon', 'active-orange');
-    });
+    // Set fade-out animation for the current slide
+    setAnimationClass("fade-out");
 
-    // Add the appropriate class for animation based on the active index
-    if (swiper.activeIndex === 0) {
-      slides[swiper.activeIndex].classList.add('active-lemon');
-    }
-    if (swiper.activeIndex === 2) {
-      slides[swiper.activeIndex].classList.add('active-orange');
+    setTimeout(() => {
+      setCurrentIndex(newIndex);
+      setAnimationClass("fade-in");
+    }, 600); 
+
+    if (onSlideChange) {
+      onSlideChange(swiper); // Call external handler if provided
     }
   };
 
@@ -38,18 +38,18 @@ export default function JuiceRight({ onSlideChange }) {
         onSlideChange={handleSlideChange}  // Call slide change handler
         className='juiceSwiper'
       >
-        <SwiperSlide>
+        <SwiperSlide className={animationClass}>
           <div style={{ display: 'flex', justifyContent: 'center' }}>
             <img src="/assets/pngwing-6-Lemon-juice-1.png" alt="Lemon Juice" style={{ height: '80%', width: '50%', left: '30px', position: 'absolute', zIndex: '2' }} />
             <img src="/assets/pngwing-Lemon-juice-2.png" alt="Lemon 2 Juice" style={{ height: '85%', width: '60%', right: '10px', position: 'absolute', zIndex: '-3' }} />
           </div>
         </SwiperSlide>
 
-        <SwiperSlide>
+        <SwiperSlide className={animationClass}>
           <img src="/assets/pngwing- Pineapple-juice.png" alt="Pineapple Juice" style={{ height: '100%', width: '100%' }} />
         </SwiperSlide>
 
-        <SwiperSlide>
+        <SwiperSlide className={animationClass}>
           <div style={{ display: 'flex', justifyContent: 'center' }}>
             <img src="/assets/pngwing-Orange-juice-cup.png" alt="Orange Juice" style={{ height: '60%', width: '80%' }} />
             <img src="/assets/pngwing-4-Orange-juice-friut-right.png" alt="half Orange Juice" style={{ height: '50%', width: '60%', right: '-80px', bottom: '0', position: 'absolute', zIndex: '-1' }} />
@@ -57,22 +57,21 @@ export default function JuiceRight({ onSlideChange }) {
           </div>
         </SwiperSlide>
 
-        <SwiperSlide>
+        <SwiperSlide className={animationClass}>
           <img src="/assets/pngwing-5-Straw-berry-juice.png" alt="Strawberry Juice" />
         </SwiperSlide>
-      
-        <SwiperSlide>
+        <SwiperSlide className={animationClass}>
           <div style={{ display: 'flex', justifyContent: 'center' }}>
             <img src="/assets/pngwing-6-Lemon-juice-1.png" alt="Lemon Juice" style={{ height: '80%', width: '50%', left: '30px', position: 'absolute', zIndex: '2' }} />
             <img src="/assets/pngwing-Lemon-juice-2.png" alt="Lemon 2 Juice" style={{ height: '85%', width: '60%', right: '10px', position: 'absolute', zIndex: '-3' }} />
           </div>
         </SwiperSlide>
 
-        <SwiperSlide>
+        <SwiperSlide className={animationClass}>
           <img src="/assets/pngwing- Pineapple-juice.png" alt="Pineapple Juice" style={{ height: '100%', width: '100%' }} />
         </SwiperSlide>
 
-        <SwiperSlide>
+        <SwiperSlide className={animationClass}>
           <div style={{ display: 'flex', justifyContent: 'center' }}>
             <img src="/assets/pngwing-Orange-juice-cup.png" alt="Orange Juice" style={{ height: '60%', width: '80%' }} />
             <img src="/assets/pngwing-4-Orange-juice-friut-right.png" alt="half Orange Juice" style={{ height: '50%', width: '60%', right: '-80px', bottom: '0', position: 'absolute', zIndex: '-1' }} />
@@ -80,7 +79,7 @@ export default function JuiceRight({ onSlideChange }) {
           </div>
         </SwiperSlide>
 
-        <SwiperSlide>
+        <SwiperSlide className={animationClass}>
           <img src="/assets/pngwing-5-Straw-berry-juice.png" alt="Strawberry Juice" />
         </SwiperSlide>
       </Swiper>

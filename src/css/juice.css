@@ -92,26 +92,49 @@
     height: auto;
     object-fit: cover; 
   }
-  
-  /* Define keyframes for animations */
-  @keyframes scaleUp {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.1); }
-    100% { transform: scale(1); }
+
+  .selection{
+    height: 40px;
+    width: 40%;
+    /* border: 1px solid blue; */
+    position: absolute;
+    top: 90%;
+    left: 35%;
+    display: flex;
+    justify-content: space-evenly;
   }
 
-  @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+  /* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
   }
+  to {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+}
 
-  /* Lemon Juice animation class */
-  .active-lemon img {
-    animation: scaleUp 1s ease-in-out forwards;
+/* Fade-out animation */
+@keyframes fadeOut {
+  from {
+    opacity: 0.5;
+    transform: scale(1);
   }
+  to {
+    opacity: 1;
+    transform: scale(1.5);
+  }
+}
 
-  /* Orange Juice animation class */
-  .active-orange img {
-    animation: fadeIn 1s ease-in-out forwards;
-  }
+/* Class to apply animation */
+.fade-in {
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.fade-out {
+  animation: fadeOut 1.5s ease-in-out;
+}
+
 
