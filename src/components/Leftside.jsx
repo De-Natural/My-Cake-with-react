@@ -7,7 +7,7 @@ export const Leftside = ({ imageData }) => {
     className='leftsided'
     style={{
       backgroundImage: `url(${imageData.leftsideImage})`,
-      backgroundSize: '500px 100%',
+      backgroundSize: '478px 100%',
       backgroundPosition: 'center',
       backgroundRepeat: 'no-repeat',
     }}

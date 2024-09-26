@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import '../css/juice.css';
 import Juiceleft from './Juiceleft';
 import JuiceRight from './JuiceRight';
+import Selection from './Selection';
 
 function Juice() {
   const [currentSlide, setCurrentSlide] = useState(0); // Shared state
@@ -52,8 +53,13 @@ function Juice() {
     console.log("Current Juice Info:", currentJuice.title, currentJuice.value, currentJuice.description);
   }, [currentSlide]);
 
+  
   return (
     <div className='Juice-class' style={{ backgroundColor: currentJuice.bgColor }}> {/* Apply dynamic background color */}
+
+      <div className="title">
+        <p>Cake Design by Kayamo</p>
+      </div>
       <Juiceleft
         value={currentJuice.value}
         title={currentJuice.title}
@@ -62,20 +68,8 @@ function Juice() {
       />
 
       <JuiceRight onSlideChange={handleSlideChange} />
-      <div className="selection">
-        <div className="icons"> 
-          <img src="/src/assets/material-symbols_cake-outline cake-icon.png" alt="" style={{height: '30px', width: '30px', cursor: 'pointer'}} />
-          </div>
-        <div className="icons">
-          <img src="/src/assets/Vector-drink-icon.png" alt="" style={{height: '30px', width: '30px', cursor: 'pointer'}} />
-        </div>
-        <div className="icons">
-          <img src="/src/assets/Vector-chat-icon.png" alt="" style={{height: '30px', width: '30px', cursor: 'pointer'}} />
-        </div>
-        <div className="icons">
-          <img src="/src/assets/heroicons-outline_thumb-up thumbUp-icon.png" alt="" style={{height: '30px', width: '30px', cursor: 'pointer'}} />
-        </div>
-      </div>
+
+      <Selection />
     </div>
   );
 

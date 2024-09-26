@@ -2,10 +2,12 @@ import React, { useState } from 'react';
 import { Leftside } from './Leftside';
 import Scroll from './Scroll';
 import Rightsided from './Rightsided';
+import Selection from './Selection';
 
 export const Dashboard = () => {
   const [rotation, setRotation] = useState(0);
   const [imageIndex, setImageIndex] = useState(0);
+  
 
   const images = [
     {
@@ -53,6 +55,7 @@ export const Dashboard = () => {
   };
   console.log(imageIndex);
 
+  
   return (
     <div className='main'>
       <div className="title">
@@ -61,20 +64,8 @@ export const Dashboard = () => {
       <Leftside imageData={images[imageIndex]} />
       <Scroll onNextSlide={handleNextSlide} onPrevSlide={handlePrevSlide} />
       <Rightsided rotation={rotation} image={images[imageIndex].circleImage} />
-      <div className="selection">
-        <div className="icons"> 
-          <img src="/src/assets/material-symbols_cake-outline cake-icon.png" alt="" style={{height: '30px', width: '30px', cursor: 'pointer'}} />
-          </div>
-        <div className="icons">
-          <img src="/src/assets/Vector-drink-icon.png" alt="" style={{height: '30px', width: '30px', cursor: 'pointer'}} />
-        </div>
-        <div className="icons">
-          <img src="/src/assets/Vector-chat-icon.png" alt="" style={{height: '30px', width: '30px', cursor: 'pointer'}} />
-        </div>
-        <div className="icons">
-          <img src="/src/assets/heroicons-outline_thumb-up thumbUp-icon.png" alt="" style={{height: '30px', width: '30px', cursor: 'pointer'}} />
-        </div>
-      </div>
+
+      <Selection />
     </div>
   );
 };

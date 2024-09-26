@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: 400;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.comments{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+h1{
+    font-size: 30px;
+}
+
+textarea{
+    height: 150px;
+    width: 50%;
+    border: 1px solid  gray;
+    /* box-shadow: 5px 5px 8px 10px gray, -2px -2px -12px 10px gray; */
+    text-indent: 20px;
+    outline: none;
+    padding-top: 10px;
+    padding: 10px;
+}
+
+.below{
+    height: 40px;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    /* border: 1px solid; */
+}
+
+button{
+    height: 30px;
+    width: 70px;
+    cursor: pointer;
+    border: none;
+    background-color: #cc9c92;
+}
+
+
+/* Fade-in and fade-out animation */
+.fade-enter {
+    opacity: 0.4;
+    transform: scale(0.5);
+  }
+  .fade-enter-active {
+    opacity: 0.4;
+    transform: scale(0.5);
+    transition: opacity 300ms, transform 300ms;
+  }
+  .fade-exit {
+    opacity: 1;
+    transform: scale(0.9);
+  }
+  .fade-exit-active {
+    opacity: 0;
+    transform: scale(0.6);
+    transition: opacity 300ms, transform 300ms;
+  }
+
+
+  
+
+  

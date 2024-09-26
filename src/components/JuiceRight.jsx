@@ -20,7 +20,7 @@ export default function JuiceRight({ onSlideChange }) {
     setTimeout(() => {
       setCurrentIndex(newIndex);
       setAnimationClass("fade-in");
-    }, 600); 
+    }, 2000); 
 
     if (onSlideChange) {
       onSlideChange(swiper); // Call external handler if provided
