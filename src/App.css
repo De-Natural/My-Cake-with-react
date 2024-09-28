@@ -236,3 +236,151 @@
   display: grid;
   place-items: center;
 }
+
+@media screen and (max-width: 950px) {
+  .main{
+    height: 200vh;
+    width: 100%;
+    gap: 18px;
+    flex-direction: column;
+  }
+  .title{
+    height: 50px;
+    width: 100%;
+    margin-top: -20%;
+    left: -5px;
+    /* border: 1px solid; */
+  }
+  .half_cake{
+    height: 100px;
+    width: 120px;
+    transform: translateX(30vw);
+    /* border: 1px solid blue; */
+  }
+  .leftsided{
+    width: 100%;
+    /* border: 1px solid red; */
+    background-size: 100% 80% !important;
+  }
+  .card{
+    width: 50% !important;
+    margin: 30% auto !important;
+    position: absolute;
+  }
+  .roll{
+    height: 75vh;
+    width: 100%;
+    /* border: 1px solid; */
+    margin-top: 80px;
+    top: -5%;
+  }
+  .circle{
+    margin: 20% auto;
+    left: 0;
+    right: 0;
+  }
+  .swiper{
+    top: -4%;
+    width: 40%;
+    left: 0;
+  }
+  .selection{
+    top: 98% !important;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .main{
+    height: 200vh;
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+  }
+  .leftsided{
+    height: 80vh;
+    width: 95%;
+    /* border: 1px solid red; */
+    margin-top: 22%;
+    margin: 50px auto;
+    background-size: 460px 100% !important;
+  }
+  .half_cake{
+    left: 300px;
+    /* border: 1px solid blue; */
+  }
+  .card{
+    width: 65% !important;
+    margin: -20px auto;
+    position: absolute;
+  }
+  .roll{
+    height: 80vh;
+    width: 100%;
+    /* border: 1px solid; */
+    margin-top: 80px;
+    top: -5%;
+  }
+  .circle{
+    height: 70%;
+    width: 70%;
+    max-width: 500px;
+    max-height: 500px;
+    aspect-ratio: 1/1;
+    /* background-color: #f0f0f0; */
+    border-radius: 50%;
+    margin: 50% auto;
+    left: 0;
+    right: 0;
+  }
+  .red, .brown, .straw, .black{
+    height: 150px;
+    width: 150px;
+    /* border: 1px solid; */
+  }
+  .red>img, .brown>img, .straw>img, .black>img{
+    height: inherit !important;
+    width: inherit !important;
+    margin: 0 auto !important;
+  }
+  .brown{
+    top: 30%;
+    right: -80px;
+  }
+  .straw{
+    top: 25%;
+  }
+  .black{
+    right: 50px;
+    bottom: -50px;
+  }
+  .red{
+    left: 50px;
+    bottom: -80px;
+    /* border: 1px solid red; */
+  }
+  .red img{
+    transform: translateX(0%);
+  }
+  .swiper{
+    /* border: 1px solid red; */
+    top: 0%;
+    width: 60%;
+    left: 0;
+  }
+  .title{
+    height: 50px;
+    width: 100%;
+    margin-top: -30%;
+    left: 10px;
+    /* border: 1px solid; */
+  }
+  .title p{
+    font-size: 18px;
+  }
+  .selection{
+    top: 98% !important;
+    width: 60%;
+    /* border: 1px solid; */
+  }
+}
