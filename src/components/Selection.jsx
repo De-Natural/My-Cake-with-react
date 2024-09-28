@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 
 function Selection() {
   const navigate = useNavigate();
-  const [likes, setLikes] = useState(0); // State to track the number of likes
+  const [likes, setLikes] = useState(0);
 
   // Function to navigate to Dashboard
   const goToDashboard = () => {

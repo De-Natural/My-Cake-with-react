@@ -53,11 +53,21 @@ button{
 .fade-enter {
     opacity: 0.4;
     transform: scale(0.5);
+    animation: slowIn 5s 1;
+  }
+  @keyframes slowIn{
+      from{
+        scale: 0.5;
+      }
+      to{
+        scale: 3;
+      }
   }
   .fade-enter-active {
     opacity: 0.4;
     transform: scale(0.5);
     transition: opacity 300ms, transform 300ms;
+    animation: slowIn 5s 1;
   }
   .fade-exit {
     opacity: 1;
