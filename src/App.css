@@ -279,6 +279,18 @@
     left: 0;
     right: 0;
   }
+  .red>img{
+    rotate: 0deg;
+  }
+  .brown>img{
+    rotate: 80deg;
+  }
+  .straw>img{
+    rotate: -90deg;
+  }
+  .black>img{
+    rotate: -90deg;
+  }
   .swiper{
     top: -4%;
     width: 40%;
@@ -296,6 +308,11 @@
     display: flex;
     gap: 20px;
     flex-direction: column;
+  }
+  .title{
+    height: 60px;
+    transform: translateY(-80px);
+    /* border: 1px solid red; */
   }
   .leftsided{
     height: 80vh;

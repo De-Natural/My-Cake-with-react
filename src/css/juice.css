@@ -243,6 +243,8 @@
     height: 30px;
     width: 60%;
     left: 25%;
+    transform: translateY(-400%);
+    /* border: 1px solid blue; */
   }
   .title p{
     font-size: 20px;
