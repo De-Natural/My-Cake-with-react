@@ -2,9 +2,10 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-route
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import './App.css';
 import '/src/css/comments.css'
-import { Dashboard } from './components/dashboard';
+// import { Dashboard } from './components/dashboard';
 import Juice from './components/Juice';
 import Comments from './components/Comments';
+import Dashboard from './components/dashboard';
 
 function AnimatedRoutes() {
   const location = useLocation(); // Get current location for transitions

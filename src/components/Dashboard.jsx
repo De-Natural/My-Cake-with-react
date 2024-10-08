@@ -4,7 +4,7 @@ import Scroll from './Scroll';
 import Rightsided from './Rightsided';
 import Selection from './Selection';
 
-export const Dashboard = () => {
+export default function Dashboard  () {
   const [rotation, setRotation] = useState(0);
   const [imageIndex, setImageIndex] = useState(0);
   
