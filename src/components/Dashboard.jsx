@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { Leftside } from './Leftside';
+import { Leftside } from "Leftside";;
 import Scroll from './Scroll';
+
 import Rightsided from './Rightsided';
 import Selection from './Selection';
 
@@ -61,7 +62,7 @@ export default function Dashboard  () {
       <div className="title">
         <p>Cake Design by Kayamo</p>
       </div>
-      <Leftside imageData={images[imageIndex]} />
+      <Leftside />
       <Scroll onNextSlide={handleNextSlide} onPrevSlide={handlePrevSlide} />
       <Rightsided rotation={rotation} image={images[imageIndex].circleImage} />
 
@@ -69,3 +70,4 @@ export default function Dashboard  () {
     </div>
   );
 };
+// imageData={images[imageIndex]}

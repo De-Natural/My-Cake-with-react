@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const Leftside = ({ imageData }) => {
+export default function Leftside ({ imageData }) {
   console.log(imageData);
   return (
     <div 
