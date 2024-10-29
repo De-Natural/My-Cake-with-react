@@ -1,32 +1,40 @@
 import React from 'react';
 
-export default function Leftside ({ imageData }) {
-  console.log(imageData);
+export default function Leftside({ imageData = {} }) {
+  // Default values for properties in case imageData is undefined or missing some properties
+  const {
+    leftsideImage = '/assets/Vector-img-straw-left.png',
+    amount = 0,
+    description = 'No description provided',
+    text = '',
+    profileImage = '/assets/pngwing-2-strawberry-half-cake.png'
+  } = imageData || {}; // Fallback to an empty object if imageData is undefined
+
   return (
     <div 
-    className='leftsided'
-    style={{
-      backgroundImage: `url(${imageData.leftsideImage})`,
-      backgroundSize: '478px 100%',
-      backgroundPosition: 'center',
-      backgroundRepeat: 'no-repeat',
-    }}
+      className='leftsided'
+      style={{
+        backgroundImage: `url(${leftsideImage})`,
+        backgroundSize: '478px 100%',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+      }}
     >
       <div className="card">
         <div className="amount">
           <span></span>
-          <input type="number" value={imageData.amount} disabled />
+          <input type="number" value={amount} disabled />
         </div>
-        <span style={{ fontSize: '22px' }}>{imageData.description}</span>
+        <span style={{ fontSize: '22px' }}>{description}</span>
         <p style={{ textAlign: 'center', fontSize: '18px' }}>
-          {imageData.text}
+          {text}
         </p>
         <button>Get now</button>
       </div>
       <div
         className="half_cake"
         style={{
-          backgroundImage: `url(${imageData.profileImage})`,
+          backgroundImage: `url(${profileImage})`,
           backgroundSize: 'contain',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',

@@ -3,6 +3,8 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import './App.css';
 import '/src/css/comments.css'
 // import { Dashboard } from './components/Dashboard';
+// import Dashboard from './Dashboard';
+import Dashboard from './components/Dashboard';
 import Juice from './components/Juice';
 import Comments from './components/Comments';
 
@@ -18,7 +20,7 @@ function AnimatedRoutes() {
       >
         <Routes location={location}>
           <Route path="/" element={<Comments />} />
-          {/* <Route path="/dashboard" element={<Dashboard />} /> */}
+          <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/juice" element={<Juice />} />
         </Routes>
       </CSSTransition>

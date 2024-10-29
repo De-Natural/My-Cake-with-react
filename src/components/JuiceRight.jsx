@@ -9,7 +9,7 @@ import 'swiper/css/scrollbar';
 export default function JuiceRight({ onSlideChange }) {
   const swiperRef = useRef(null);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [animationClass, setAnimationClass] = useState("fade-in"); // Animation class
+  const [animationClass, setAnimationClass] = useState("fade-in");
 
   const handleSlideChange = (swiper) => {
     const newIndex = swiper.activeIndex;
