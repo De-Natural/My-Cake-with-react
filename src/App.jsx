@@ -3,7 +3,6 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import './App.css';
 import '/src/css/comments.css'
 // import { Dashboard } from './components/Dashboard';
-// import Dashboard from './Dashboard';
 import Dashboard from './components/Dashboard';
 import Juice from './components/Juice';
 import Comments from './components/Comments';

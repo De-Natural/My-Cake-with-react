@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
-import Leftside from './Leftside';
+// import { Leftside } from "Leftside";;
 import Scroll from './Scroll';
+import Leftside from './Leftside';
+
 import Rightsided from './Rightsided';
 import Selection from './Selection';
 
@@ -64,4 +66,4 @@ export default function Dashboard() {
       <Selection />
     </div>
   );
-}
+};

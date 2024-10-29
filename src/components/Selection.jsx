@@ -28,16 +28,16 @@ function Selection() {
   return (
     <div className="selection">
       <div className="icons" id="cake" onClick={goToDashboard}> 
-        <img src="/src/assets/material-symbols_cake-outline cake-icon.png" alt="" style={{height: '30px', width: '30px', cursor: 'pointer'}} />
+        <img src="/assets/material-symbols_cake-outline cake-icon.png" alt="" style={{height: '30px', width: '30px', cursor: 'pointer'}} />
       </div>
       <div className="icons" id="drink" onClick={goToJuice}>
-        <img src="/src/assets/Vector-drink-icon.png" alt="" style={{height: '30px', width: '30px', cursor: 'pointer'}} />
+        <img src="/assets/Vector-drink-icon.png" alt="" style={{height: '30px', width: '30px', cursor: 'pointer'}} />
       </div>
       <div className="icons" id="comment" onClick={goToComments}>
-        <img src="/src/assets/Vector-chat-icon.png" alt="" style={{height: '30px', width: '30px', cursor: 'pointer'}} />
+        <img src="/assets/Vector-chat-icon.png" alt="" style={{height: '30px', width: '30px', cursor: 'pointer'}} />
       </div>
       <div className="icons" id="likes" onClick={incrementLikes} style={{ position: 'relative' }}>
-        <img src="/src/assets/heroicons-outline_thumb-up thumbUp-icon.png" alt="" style={{height: '30px', width: '30px', cursor: 'pointer'}} />
+        <img src="/assets/heroicons-outline_thumb-up thumbUp-icon.png" alt="" style={{height: '30px', width: '30px', cursor: 'pointer'}} />
         {likes > 0 && (
           <span style={{
             position: 'absolute',
