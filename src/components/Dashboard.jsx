@@ -1,10 +1,15 @@
+// Dashboard.jsx
 import React, { useState } from 'react';
-// import { Leftside } from "Leftside";;
 import Scroll from './Scroll';
 import Leftside from './Leftside';
-
 import Rightsided from './Rightsided';
 import Selection from './Selection';
+
+// Import images to ensure paths are correct
+import strawRight from '/src/assets/Subtract-img-straw-right.png';
+import vanillaRight from '/src/assets/Subtractright-size.png';
+import chocolateRight from '/src/assets/Subtract-Blum-game.png';
+import blackForestRight from '/src/assets/Subtract-This-one.png';
 
 export default function Dashboard() {
   const [rotation, setRotation] = useState(0);
@@ -13,7 +18,7 @@ export default function Dashboard() {
   const images = [
     {
       leftsideImage: '/assets/Vector-img-straw-left.png',
-      circleImage: '/assets/Subtract-img-straw-right.png',
+      circleImage: strawRight, // Using the imported image
       profileImage: '/assets/pngwing-2-strawberry-half-cake.png',
       description: 'Strawberry Cake',
       amount: 70.8,
@@ -21,7 +26,7 @@ export default function Dashboard() {
     },
     {
       leftsideImage: '/assets/Vectorleft-size.png',
-      circleImage: '/assets/Subtractright-size.png',
+      circleImage: vanillaRight,
       profileImage: '/assets/pngwinghalf.png',
       description: 'Vanilla Cake',
       amount: 75.0,
@@ -29,7 +34,7 @@ export default function Dashboard() {
     },
     {
       leftsideImage: '/assets/Vector-img-brown-left.png',
-      circleImage: '/assets/Subtract-Blum-game.png',
+      circleImage: chocolateRight,
       profileImage: '/assets/pngwing-1-brown-half-cake.png',
       description: 'Chocolate Cake',
       amount: 80.0,
@@ -37,7 +42,7 @@ export default function Dashboard() {
     },
     {
       leftsideImage: '/assets/Vector-img-black-left.png',
-      circleImage: '/assets/Subtract-This-one.png',
+      circleImage: blackForestRight,
       profileImage: '/assets/pngwing-3-black-half-cake.png',
       description: 'Black Forest Cake',
       amount: 85.0,
