@@ -1,5 +1,4 @@
-// Dashboard.jsx
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Scroll from './Scroll';
 import Leftside from './Leftside';
 import Rightsided from './Rightsided';
@@ -18,7 +17,7 @@ export default function Dashboard() {
   const images = [
     {
       leftsideImage: '/assets/Vector-img-straw-left.png',
-      circleImage: strawRight, // Using the imported image
+      circleImage: strawRight,
       profileImage: '/assets/pngwing-2-strawberry-half-cake.png',
       description: 'Strawberry Cake',
       amount: 70.8,
@@ -59,6 +58,26 @@ export default function Dashboard() {
     setRotation((prevRotation) => prevRotation + 90);
     setImageIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
   };
+
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.innerHTML = `
+      var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+      (function(){
+      var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+      s1.async=true;
+      s1.src='https://embed.tawk.to/672367074304e3196adb1ad3/1ibh624a6';
+      s1.charset='UTF-8';
+      s1.setAttribute('crossorigin','*');
+      s0.parentNode.insertBefore(s1,s0);
+      })();
+    `;
+    document.body.appendChild(script);
+
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
 
   return (
     <div className="main">
